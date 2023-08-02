@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 0px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 
 body{
@@ -32,7 +32,7 @@ html{
 
 
 #navbar1{
-    background-color: #9fe9c4;
+    background-color: #77501e;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +98,7 @@ html{
     font-size: 1.75rem;
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 845px) {
     
     #navbar1{
         transition: 0.2s;
@@ -118,7 +118,7 @@ html{
 /* Header 2 CSS */
 
 #navbar2{
-    background-color: #344E41;
+    background-color: #105c36;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,12 +173,16 @@ html{
     transition: 0.4s;
 }
 
+.checkbox3{
+    display: none;
+}
+
 .navlinks3{
     margin-left: auto;
 }
 
 .logo3{
-    margin-left: auto;
+    margin-right: auto;
     margin-top: .75rem;
 }
 
@@ -201,10 +205,27 @@ html{
     text-decoration: underline;
 }
 
+@media screen and (max-width: 875px) {
+    
+    #navbar3{
+        transition: 0.2s;
+        position: normal;
+    }
+
+    .checkbox3{
+        display: contents;
+    }
+
+    .navlinks3{
+        display: none;
+    }
+
+}
+
 /* Header 4 CSS */
 
 #navbar4{
-    background-color: #344E41;
+    background-color: #5d9c7d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,6 +244,7 @@ html{
 .logo4{
     margin-left: auto;
     margin-top: .75rem;
+    margin-bottom: 0;
 }
 
 .checkbox4{
@@ -243,3 +265,121 @@ html{
     margin: 5px 0;
     transition: 0.4s;
 }
+
+/* Header 5 CSS */
+
+#navbar5{
+    background-color: #7c7ed3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 10%; 
+
+    top: 0; 
+    width: 100%;
+    height: 3.5rem;
+    transition: 0.4s;
+}
+
+#navbar5 li, a, h2{
+    color: rgb(0, 0, 0);
+}
+
+#navbar5 li, a{
+    text-decoration: none;
+    font-size: 1.75rem;
+    
+}
+
+.boxes5 {
+    list-style: none;
+    display: flex; 
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+.boxes5 li{
+    display: inline-block;
+    padding: 0px 2rem;
+    transition: all 0.3s ease 0s;
+}
+
+.boxes5 li:active{
+    background-color: red;
+}
+
+.box1{
+    background-color: none;
+}
+
+.box2{
+    background-color: none;
+}
+
+.box3{
+    background-color: none;
+}
+
+/* Popup Burger Menu */
+
+#menu{
+    margin: 0; 
+    padding: 0;
+    position: fixed;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    background: #272735;
+    z-index: 1;
+    transition: 0.5s;
+
+    display: none;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    list-style: none;
+
+    display:flex;
+    flex-direction: column;
+}
+
+#menu ul li a{
+    padding: 10px;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #262626;
+
+    margin-bottom: 2rem;
+}
+
+#menu ul li a:hover{
+    background: #FFFC85
+}
+
+#menu.active{
+    left: 0;
+    overflow: auto;
+}
+
+.exitMenu h1{
+    color: whitesmoke;
+    padding-left: 95%;
+}
+
+.exitMenu h1:hover{
+    cursor: pointer;
+}
+
+

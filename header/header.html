@@ -18,7 +18,7 @@
     <!--Header 1 HTML-->
     <header id="navbar1">
         <div class="checkbox1">
-            <div class="burgerbox1" onclick="hiddenMenu()">
+            <div class="burgerbox1" onclick="burgerMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -47,7 +47,7 @@
             </a>
         </div>
         <div class="checkbox2">
-            <div class="burgerbox2" onclick="hiddenMenu()">
+            <div class="burgerbox2" onclick="burgerMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -61,28 +61,34 @@
 
     <!--Header 3 HTML-->
     <header id="navbar3">
-        <nav>
-            <ul class="navlinks1">
-                <li><a href="option1.html">Option1</a></li>
-                <li><a href="option2.html">Option2</a></li>
-                <li><a href="option3.html">Option3</a></li>
-            </ul>
-        </nav>
         <div class="logo3">
             <a href="landingPage.html">
                 <img src="images/Kale_Photography_Logo.png" alt="tempLogo"
                 style="width:10rem; height:4.75rem;">
             </a>
         </div>
-
+        <nav>
+            <ul class="navlinks3">
+                <li><a href="option1.html">Option1</a></li>
+                <li><a href="option2.html">Option2</a></li>
+                <li><a href="option3.html">Option3</a></li>
+            </ul>
+        </nav>
+        <div class="checkbox3">
+            <div class="burgerbox1" onclick="burgerMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
     </header>
 
     <header id="spacer"></header>
 
-    <!--Header 3 HTML-->
+    <!--Header 4 HTML-->
     <header id="navbar4">
         <div class="checkbox4">
-            <div class="burgerbox2" onclick="hiddenMenu()">
+            <div class="burgerbox2" onclick="burgerMenu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -96,6 +102,52 @@
         </div>
     </header>
 
+    <header id="spacer"></header>
+
+    <!--Header 5 HTML-->
+    <header id="navbar5">
+        <div class="boxes5">
+            <div class="box" onclick="nav5ColorTab('1')">
+                <li>Option1</li>
+            </div>
+            <div class="box" onclick="nav5ColorTab('2')">
+                <li>Option2</li>
+            </div>
+            <div class="box" onclick="nav5ColorTab('3')">
+                <li>Option3</li>
+            </div>
+        </div>
+    </header>
+
+    <div id="menu">
+        <div class="exitMenu">
+            <h1 onclick="burgerReset()">X</h1>
+        </div>
+        <ul>
+            <li><a href="option1">Option1</a></li>
+            <li><a href="option2">Option2</a></li>
+            <li><a href="option3">Option3</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function burgerMenu(){
+            var options = document.getElementById("menu");
+            var screenWipe = document.getElementsByTagName("header")
+            for (var i=0; i<screenWipe.length; i++){
+                screenWipe[i].style.display = "none";
+            }
+            options.style.display = "contents";
+        }
+        function burgerReset(){
+            var options = document.getElementById("menu");
+            var screenWipe = document.getElementsByTagName("header")
+            for (var i=0; i<screenWipe.length; i++){
+                screenWipe[i].style.display = "";
+            }
+            options.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
